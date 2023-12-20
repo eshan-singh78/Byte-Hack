@@ -1,0 +1,126 @@
+/* public/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
+/* Navbar styles */
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .left-buttons ul,
+  .right-buttons ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .left-buttons li,
+  .right-buttons li {
+    margin-right: 15px;
+  }
+  
+  .left-buttons a,
+  .right-buttons a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Rethink Sans', sans-serif; /* Apply Rethink Sans font */
+    transition: color 0.3s; /* Add transition for color change */
+  }
+  
+  .left-buttons a:hover,
+  .right-buttons a:hover {
+    color: #ffd700; /* Change text color to light golden on hover */
+  }
+  
+  /* Centered text styles */
+  .byte-hack {
+    font-family: 'Rethink Sans', sans-serif; /* Apply Rethink Sans font */
+    font-size: 24px; /* Example font size */
+    animation: changeFont 5s infinite; /* Example animation for changing font style */
+  }
+  
+  @keyframes changeFont {
+  }
+  
+
+  .matrix-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure it's behind other content */
+  }
+
+  .home-content {
+    /* Other styles for the home content (if any) */
+  }
+  
+  .page-title {
+    font-family: 'Electrolize', sans-serif; /* Apply Electrolize font */
+    text-align: center;
+    margin-top: 50px; /* Adjust margin as needed */
+    font-size: 48px; /* Adjust font size as needed */
+    color: white; /* Adjust text color as needed */
+  }
+
+  .sub-text {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-top: 20px; /* Adjust margin as needed */
+    font-size: 15px; /* Adjust font size as needed */
+    color: antiquewhite; /* Adjust text color as needed */
+    line-height: 24px;
+  }
+
+
+
+  .countdown-card {
+    height: 150px;
+    width: 600px;
+    padding: 5px;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .countdown-title {
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .timer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .timer span {
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+    font-size: 36px;
+    padding: 0 5px;
+  }
+  
+  .timer span:nth-child(odd) {
+    color: #009900; /* Change color for odd spans (days, hours, minutes) */
+  }
+  
+  .timer span:nth-child(even) {
+    color: #ffcc00; /* Change color for even spans (separators, seconds) */
+  }
+
+  .label {
+    font-weight: 700; /* Apply bold font weight */
+    margin-bottom: 5px; /* Adjust margin as needed */
+  }

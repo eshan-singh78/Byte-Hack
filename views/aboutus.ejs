@@ -1,0 +1,62 @@
+<!-- views/about.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About Us</title>
+  <link rel="stylesheet" href="/stylesheets/aboutstyle.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="left-buttons">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="center-text">
+      <h1 class="byte-hack">BYTE HACK</h1>
+    </div>
+    <div class="right-buttons">
+      <ul>
+        <li><a href="/signup">Signup</a></li>
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="matrix-effect">
+    <canvas id="matrixCanvas"></canvas>
+  </div>
+
+
+  <!-- Main content for About Us -->
+  <div class="about-content">
+    <h2>Who we are?</h2>
+    <p>
+      We are a group of people who are trying to bring the CTF (Capture The Flag) event prominently in India as a trend among students and enthusiasts. We focus on creating an experience rather than just a puzzle-solving competition.
+    </p>
+
+    <h2>What we do?</h2>
+    <p>
+      We assist colleges and other open CTF organizers by creating a series of puzzles, problems, vulnerable machines, and more. Additionally, we manage the submission and digital/tech aspects of event organization. Our scenarios are created by in-house brains that are deeply involved in scrapping the web for daily updates to keep our events aligned with technological advancements.
+    </p>
+
+    <h2>Our aim?</h2>
+    <p>
+      Our goal is simple: to make CTF a trend not only among cybersecurity enthusiasts but also among everyone connected to the tech industry!
+    </p>
+  </div>
+
+
+  
+  <!-- Include script file for Matrix effect -->
+  <script src="/scripts/indexscript.js"></script> <!-- Link to your JavaScript file -->
+</body>
+
+</html>

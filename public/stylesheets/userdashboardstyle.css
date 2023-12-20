@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic&family=Nunito+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
+
+
+
+.user-dashboard-content {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.6;
+    color: white;
+  }
+  
+  .matrix-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+  }
+
+  #tex-col{
+    color: white;
+    font-family: 'Rethink Sans', sans-serif; 
+    font-size: 24px;
+  }
+
+  .user-card {
+    backdrop-filter: blur(10px); 
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+  }
+
+  
+  .logout-container {
+    text-align: left; 
+    margin-top: 15%; 
+  }
+  
+
+  .logout-btn {
+    background-color: #ff3333;
+    color: white;
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px; 
+  }
+  
+
+  .logout-btn:hover {
+    background-color: #d63031; 
+  }
+
+  .user-card-right {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 250px; 
+    flex: 0 0 calc(33.33% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }

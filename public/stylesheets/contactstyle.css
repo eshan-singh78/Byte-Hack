@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic&family=Nunito+Sans:wght@400&display=swap');
+
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .left-buttons ul,
+  .right-buttons ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .left-buttons li,
+  .right-buttons li {
+    margin-right: 15px;
+  }
+  
+  .left-buttons a,
+  .right-buttons a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Rethink Sans', sans-serif; 
+    transition: color 0.3s; 
+  }
+  
+  .left-buttons a:hover,
+  .right-buttons a:hover {
+    color: #ffd700; 
+  }
+  
+  .byte-hack {
+    font-family: 'Rethink Sans', sans-serif; 
+    font-size: 24px; 
+    animation: changeFont 5s infinite; 
+  }
+  
+  @keyframes changeFont {
+  }
+  
+  .matrix-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+  }
+
+  .contact-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  .contact-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-card label {
+    font-weight: bold;
+    color: white;  
+  }
+
+  .contact-card input,
+  .contact-card textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .contact-card button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+  }
+
+  .contact-card button:hover {
+    background-color: #555;
+  }

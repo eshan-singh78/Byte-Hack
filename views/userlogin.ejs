@@ -1,0 +1,142 @@
+<!-- views/userLogin.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Login</title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS file -->
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Neohellenic&family=Nunito+Sans:wght@400&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Additional styles for the User Login page */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Nunito Sans', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .login-card {
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      padding: 30px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .login-card h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .login-card label,
+    .login-card input {
+      display: block;
+      margin-bottom: 15px;
+      width: calc(100% - 30px);
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .login-card .form-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .login-card button {
+      width: calc(48% - 7.5px);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-card button:hover {
+      background-color: #555;
+    }
+
+    .matrix-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure it's behind other content */
+  }
+
+  .back-button {
+    position: absolute; /* Set the position to absolute */
+    top: 10px; /* Adjust top position as needed */
+    left: 10px; /* Adjust left position as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 8px;
+    width: 20px; /* Set a fixed width */
+    height: 20px; /* Set a fixed height */
+    border-radius: 5px;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: background-color 0.3s ease;
+    font-family: 'Rethink Sans', sans-serif; /* Apply Rethink Sans font */
+  }
+  
+  .back-button:hover {
+    background-color: #007700;
+  }
+  </style>
+</head>
+
+<body>
+    <a href="/login" class="back-button">
+        <i class="fas fa-arrow-left"></i> <!-- Font Awesome arrow-left icon -->
+    </a>
+  <div class="login-card">
+    <h2>User Login</h2>
+    <form id="loginForm" action="/api/user-login" method="POST">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+    
+      <!-- ... (other form elements) ... -->
+    
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div class="matrix-effect">
+    <canvas id="matrixCanvas"></canvas>
+  </div>
+  <script src="/scripts/indexscript.js"></script>
+  
+  <script>
+    // Get the error message from the URL query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get('error');
+
+    // Display alert if error exists
+    if (error) {
+      alert(decodeURIComponent(error));
+    }
+    
+  </script>
+
+
+</body>
+
+</html>

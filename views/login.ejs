@@ -1,0 +1,26 @@
+<!-- views/admin.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="/stylesheets/loginstyle.css">
+</head>
+<body>
+  <a href="/" class="back-button">
+    <i class="fas fa-arrow-left"></i> <!-- Font Awesome arrow-left icon -->
+</a>
+<div class="login-buttons">
+  <p class="login-text">
+    Users who signed up for the services can use the normal "User Login" way.<br> For those here for event login, credentials will be provided via your mail or by the event organizer.
+  </p>
+  <button onclick="location.href='/user-login'" style="font-family: 'Nunito Sans', sans-serif;">User Login</button>
+  <button onclick="location.href='/event-login'" style="font-family: 'Nunito Sans', sans-serif;">Event Login</button>
+
+</div>
+<div class="matrix-effect">
+  <canvas id="matrixCanvas"></canvas>
+</div>
+<script src="/scripts/indexscript.js"></script>
+</body>
+</html>

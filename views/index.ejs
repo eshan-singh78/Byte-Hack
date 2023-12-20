@@ -1,0 +1,70 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap">
+  <link rel="stylesheet" href="/stylesheets/indexstyle.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div class="navbar">
+      <div class="left-buttons">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="center-text">
+        <h1 class="byte-hack">BYTE HACK</h1>
+      </div>
+      <div class="right-buttons">
+        <ul>
+          <li><a href="/signup">Signup</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="matrix-effect">
+        <canvas id="matrixCanvas"></canvas>
+      </div>
+
+    <div class="home-content">
+        <h1 class="page-title">Hack to its Byte</h1>
+        <p class="sub-text">
+            Get engaged and work through the sets of puzzle created by the L0Ck MASTER <br> and let's get involved onto a learning together process <br> where you break and we make it more stronger, <br> So get ready to polish your skills!
+          </p>
+      </div>
+
+  <!-- views/index.ejs or views/countdown.ejs -->
+
+  <div class="countdown-card">
+    <h2 class="countdown-title">Countdown Timer</h2>
+    <div class="timer">
+      <div class="countdown-item">
+        <span class="label" style="color: whitesmoke; font-size: 25px;font-family: 'Montserrat', sans-serif;">Days</span>
+        <span id="days">00</span>
+      </div>
+      <div class="countdown-item">
+        <span class="label" style="color: whitesmoke; font-size: 25px;font-family: 'Montserrat', sans-serif;">Hours</span>
+        <span id="hours">00</span>
+      </div>
+      <div class="countdown-item">
+        <span class="label" style="color: whitesmoke; font-size: 25px;font-family: 'Montserrat', sans-serif;">Minutes</span>
+        <span id="minutes">00</span>
+      </div>
+      <div class="countdown-item">
+        <span class="label" style="color: whitesmoke; font-size: 25px;font-family: 'Montserrat', sans-serif;">Seconds</span>
+        <span id="seconds">00</span>
+      </div>
+    </div>
+  </div>
+
+      <script src="/scripts/indexscript.js"></script>
+
+
+  </body>
+  
+</html>

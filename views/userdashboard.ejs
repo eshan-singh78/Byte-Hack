@@ -1,0 +1,158 @@
+<!-- views/userdashboard.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="/stylesheets/userdashboardstyle.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+  <!-- Matrix effect -->
+  <div class="matrix-effect">
+    <canvas id="matrixCanvas"></canvas>
+  </div>
+
+  <!-- Main content for User Dashboard -->
+  <div class="user-dashboard-content">
+    <h2>Welcome to the User Dashboard</h2>
+    <!-- Add more content specific to the user dashboard here -->
+  </div>
+
+  <div class="flex-container">
+  <div class="user-card">
+    <h3 id="tex-col">Welcome, <span id="userName"></span></h3>
+    <p class="time-date" id="timeDate"></p>
+    <!-- The username will be fetched and displayed here -->
+  </div>
+
+  <div class="user-card-right">
+    <h3 id="tex-col"> Practice Questions-</h3>
+    <h5>Question 1 - Download the python file and repair the decrypter and decrypt the key- "" and submit the decrypted key!</h5>
+    <button id="downloadScript">Download Script</button>
+    <form id="questionForm-1">
+      <label for="answer">Enter your answer:</label>
+      <input type="text" id="answer" name="answer" required>
+      <button type="submit">Submit</button>
+    </form>
+
+
+    <h5>Question 2- Go to the following link; and find the flag!</h5>
+    <!-- Button to reveal the flag -->
+    <button id="toggleFlag">Show Flag</button>
+    <div id="flag" style="display: none;">Flag: *****</div>
+  </div>
+  </div>
+
+  </div>
+  <div class="logout-container">
+    <form action="/api/logout" method="POST">
+      <button type="submit" class="logout-btn">Logout</button>
+    </form>
+  </div>
+
+
+  <!-- Include script file for Matrix effect -->
+  <script src="/scripts/indexscript.js"></script> <!-- Link to your JavaScript file -->
+  <script>
+    // Fetch the username via an API endpoint or backend route
+    // For instance, you can use an AJAX call or fetch API to retrieve the username
+    // Here's a sample AJAX call - replace with your actual endpoint
+    fetch('/api/get-username', {
+      method: 'GET',
+      credentials: 'same-origin' // Ensure the session cookie is sent
+    })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('userName').textContent = ` ${data.username}`;
+      })
+      .catch(error => console.error('Error fetching username:', error));
+  </script>
+
+<script>
+  // Function to update the time
+  function updateTime() {
+    const currentDate = new Date();
+    const options = {
+      timeZone: 'Asia/Kolkata', // Set the timezone to IST
+      hour12: true,
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    };
+    const formattedDate = new Intl.DateTimeFormat('en-IN', options).format(currentDate);
+    document.getElementById('timeDate').innerText = formattedDate;
+  }
+
+  // Call updateTime initially to set the time immediately
+  updateTime();
+
+  // Update time every second
+  setInterval(updateTime, 1000);
+
+  document.getElementById('questionForm-1').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  // Get the input value
+  const answer = document.getElementById('answer').value;
+
+  // Hardcoded correct answer
+  const correctAnswer1 = 'Byte@Hack-1';
+
+  // Check if the answer matches the hardcoded string
+  if (answer === correctAnswer1) {
+    alert('Correct answer!'); // Show a popup indicating the answer is correct
+  } else {
+    alert('Incorrect answer!'); // Show a popup indicating the answer is incorrect
+  }
+  this.reset();
+});
+
+
+const flagDiv = document.getElementById('flag');
+    document.getElementById('toggleFlag').addEventListener('click', function() {
+      if (flagDiv.style.display === 'none') {
+        flagDiv.textContent = 'Flag: dis-is-da-flag'; // Replace 'Your_Flag_Text' with the actual flag text
+        flagDiv.style.display = 'block';
+        document.getElementById('toggleFlag').textContent = 'Hide Flag';
+      } else {
+        flagDiv.style.display = 'none';
+        document.getElementById('toggleFlag').textContent = 'Show Flag';
+      }
+    });
+
+function downloadScript() {
+    const pythonScript = `
+def encrypt_password(password):
+    encrypted = ''
+    for char in password:
+        encrypted += chr(ord(char) + 1) 
+    return encrypted
+
+decrypted_password = decrypt_password(user_password)
+print("Decrypted password:", decrypted_password)
+`;
+
+    const link = document.createElement('a');
+    const blob = new Blob([pythonScript], { type: 'text/plain' });
+    link.href = URL.createObjectURL(blob);
+    link.download = 'script.py';
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  document.getElementById('downloadScript').addEventListener('click', downloadScript);
+
+</script>
+
+
+</body>
+
+</html>

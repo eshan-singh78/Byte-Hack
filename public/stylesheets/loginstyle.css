@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic&family=Nunito+Sans:wght@400&family=Audiowide&display=swap');
+
+.matrix-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure it's behind other content */
+  }
+
+  .texcol{
+    color: white;
+  }
+
+  /* Back button styles */
+  .back-button {
+    position: absolute; /* Set the position to absolute */
+    top: 10px; /* Adjust top position as needed */
+    left: 10px; /* Adjust left position as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 8px;
+    width: 20px; /* Set a fixed width */
+    height: 20px; /* Set a fixed height */
+    border-radius: 5px;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: background-color 0.3s ease;
+    font-family: 'Rethink Sans', sans-serif; /* Apply Rethink Sans font */
+  }
+  
+  .back-button:hover {
+    background-color: #007700;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  .login-buttons {
+    text-align: center;
+  }
+
+  .login-buttons button {
+    padding: 30px 50px; /* Increased button size */
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2); /* Initial blurred background color */
+    color: white; /* Hide text initially */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transition for background and text color */
+  }
+
+  .login-buttons button:hover {
+    background-color: #007700; /* Blurred background color on hover */ 
+  }
+
+  .login-text {
+    margin-top: 20px;
+    font-family: 'Audiowide', cursive; /* Font style for the additional text */
+    font-size: 18px;
+    color: white;
+  }

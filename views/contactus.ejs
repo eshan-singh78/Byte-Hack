@@ -1,0 +1,62 @@
+<!-- views/about.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="/stylesheets/contactstyle.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <div class="navbar">
+    <div class="left-buttons">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="center-text">
+      <h1 class="byte-hack">BYTE HACK</h1>
+    </div>
+    <div class="right-buttons">
+      <ul>
+        <li><a href="/signup">Signup</a></li>
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="matrix-effect">
+    <canvas id="matrixCanvas"></canvas>
+  </div>
+
+  <div class="contact-card">
+    <h2 style="color: white; text-align: center;">Contact Us</h2>
+    <form action="/submit-contact" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+    
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    
+      <button type="submit">Send</button>
+    </form>
+    
+  </div>
+  <script src="/scripts/indexscript.js"></script>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+const message = urlParams.get('message');
+
+// Display the message in an alert box if present
+if (message) {
+  alert(message);
+}
+</script>
+</body>
+</html>

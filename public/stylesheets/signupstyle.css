@@ -1,0 +1,113 @@
+/* public/styles.css */
+
+/* Navbar styles */
+
+/* Other styles (if any) */
+
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+.signup-card {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    /* Apply backdrop filter for blur effect */
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Fallback background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Rethink Sans', sans-serif; /* Apply Rethink Sans font */
+  }
+
+.signup-card h2 {
+  text-align: center;
+}
+
+.form-container {
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-family: 'Rethink Sans', sans-serif; /* Apply Rethink Sans font */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: 'Rethink Sans', sans-serif; /* Apply Rethink Sans font */
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #009900;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Rethink Sans', sans-serif; /* Apply Rethink Sans font */
+}
+
+button:hover {
+  background-color: #007700;
+}
+
+.matrix-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure it's behind other content */
+  }
+
+  .texcol{
+    color: white;
+  }
+
+  /* Back button styles */
+  .back-button {
+    position: absolute; /* Set the position to absolute */
+    top: 10px; /* Adjust top position as needed */
+    left: 10px; /* Adjust left position as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 8px;
+    width: 20px; /* Set a fixed width */
+    height: 20px; /* Set a fixed height */
+    border-radius: 5px;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: background-color 0.3s ease;
+    font-family: 'Rethink Sans', sans-serif; /* Apply Rethink Sans font */
+  }
+  
+  .back-button:hover {
+    background-color: #007700;
+  }
+
+  .popup {
+    position: fixed;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 9999;
+    transition: bottom 0.5s ease-in-out;
+  }
