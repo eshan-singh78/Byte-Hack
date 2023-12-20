@@ -40,7 +40,7 @@ router.post('/api/signup', async (req, res) => {
     await newUser.save();
 
     // Create verification link with localhost
-    const verificationLink = `http://localhost:8000/api/verify?token=${verificationToken}`;
+    const verificationLink = `http://byte-hack.onrender.com/api/verify?token=${verificationToken}`;
 
     // Send verification link via email
     const mailOptions = {
