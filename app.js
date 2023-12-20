@@ -22,7 +22,7 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb+srv://progressivesingh:23smJg0EU2jLALKw@bytehack-db-es.ybloyrv.mongodb.net/bytehacktestdb-1?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://byte-hack-user:wXVN:fi3p-bK9_7@bytehack-db-es.ybloyrv.mongodb.net/bytehacktestdb-1?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
