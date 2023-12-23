@@ -18,7 +18,10 @@ To run this project locally, follow these steps:
 5. Open the `app.js` file in the project's root directory.
 6. Change the MongoDB connection link to `localhost`.
    ```javascript
-   mongoose.connect('mongodb://localhost:your_db_name_here', { useNewUrlParser: true, useUnifiedTopology: true });
+   mongoose.connect('mongodb+srv://byte-hack-user:bytehackdb-es@bytehack-db-es.ybloyrv.mongodb.net/bytehacktestdb-1?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
    ```
 7. Modify the verification link domain name from `https://byte-hack.onrender.com/` to `localhost`.
 8. Save the changes in the `app.js` file.
