@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic&family=Nunito+Sans:wght@400&display=swap');
 
+body {
+  overflow: hidden;
+}
+
 .navbar {
     background-color: black;
     color: white;
