@@ -8,6 +8,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
+body {
+  overflow: hidden;
+}
+
 .signup-card {
     position: relative;
     width: 300px;
