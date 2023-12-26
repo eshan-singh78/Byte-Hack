@@ -2,6 +2,10 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic&family=Nunito+Sans:wght@400&family=Audiowide&display=swap');
 
+body {
+  overflow: hidden;
+}
+
 .matrix-effect {
     position: absolute;
     top: 0;
