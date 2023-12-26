@@ -87,3 +87,22 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
   }
+
+  .footer {
+    text-align: center;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 0;
+    margin-top: auto; /* To ensure it's at the bottom of the page */
+  }
+  
+  .footer p {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .footer a {
+    color: white;
+    margin: 0 5px;
+    text-decoration: none;
+  }
